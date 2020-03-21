@@ -10,11 +10,12 @@ options(warn=-1)
 
 # check if file is present
 if(length(args) == 0){
-  stop("CHARGER LA BÉTAILLÈRE!", call. = F)
+  stop(print('Usage: BEDdistance.R file.bed file.bed'), call. = F)
 } else if(length(args) == 1){
   FILE2 <- FILE1
   #print(paste0("Single File input: ", FILE1))
-} #else {print(paste0("Two files: ", FILE1," and ", FILE2))}
+} 
+
 
 # load libraries ----------------------------------------------------
 suppressMessages(suppressWarnings(require(data.table)))
@@ -120,20 +121,3 @@ l <- parallel::mclapply(BEDlist, f.dist, mc.cores = 1)
 STDOUT <- do.call(rbind.data.frame, l)
 # write out to stdout
 fwrite(STDOUT, '', sep = '\t')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
