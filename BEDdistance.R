@@ -1,5 +1,6 @@
 # like bedtools closest but calculate distance for all elements
-
+# Wyler Michele
+# March 21th 2020, Zurigo, Switzerland
 
 args <- commandArgs(TRUE)
 FILE1 <- args[1]
