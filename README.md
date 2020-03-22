@@ -1,4 +1,4 @@
-# BedDistanceR
+# BedDistancR
 
 Users of [Bedtools](https://bedtools.readthedocs.io/en/latest/index.html) and genome annotations in [Bed format](https://www.ensembl.org/info/website/upload/bed.html) maybe noticed that one missing task: calculating the physical distance between genomic features. In fact [bedtool closest](https://bedtools.readthedocs.io/en/latest/content/tools/closest.html) allows only to calculate the distance between to proximal features. Following the UNIX phylosophy to create one software for one task, BedDistancR is the attempt to fill this gap. Don’t hesitate to communicate any issues.
 
@@ -7,7 +7,7 @@ Download and Usage
 
 The only dependency is the R package [data.table](https://cran.r-project.org/web/packages/data.table/). This should be automatically downloaded in case it’s missing. Clone the repository and use BedDistancR as follow:
 ```
-$ Rscript */path/to/BedDistancR/*BedDistanc.R <FILE1.bed> [FILE2.bed] 
+$ Rscript /path/to/BedDistancR/BedDistanc.R <FILE1.bed> [FILE2.bed] 
 ```
 By default the results appear as **STDOUT**, but they can be redirected with *"> results.txt"*
 
@@ -20,7 +20,7 @@ Chr1    185     203     GeneD
 
 ```
 BedDistancR is optimized for large files. If many features are annotated on the same chromosome, the STDOUT can appear only with a short delay.
-The output contains all possible pairings with the features contained in FILE1.bed. The last column (*‘distance’*) indicates the bp distance to the feature a feuater (defined with *‘chrom.y’*, *‘Start.y’* and *‘End.y’*).
+The output contains all possible pairings with the features contained in FILE1.bed. The last column (*‘distance’*) indicates the bp distance to other features  (defined with *‘chrom.y’*, *‘Start.y’* and *‘End.y’*).
 
 ```
 chrom.x	Start.x	End.x	V4	chrom.y	Start.y	End.y	V4	distance
