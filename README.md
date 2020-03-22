@@ -1,6 +1,6 @@
 # BedDistancR
 
-Users of [Bedtools](https://bedtools.readthedocs.io/en/latest/index.html) and genome annotations in [Bed format](https://www.ensembl.org/info/website/upload/bed.html) maybe noticed that one missing task: calculating the physical distance between genomic features. In fact [bedtool closest](https://bedtools.readthedocs.io/en/latest/content/tools/closest.html) allows only to calculate the distance between to proximal features. Following the UNIX phylosophy to create one software for one task, BedDistancR is the attempt to fill this gap. Don’t hesitate to communicate any issues.
+Users of [Bedtools](https://bedtools.readthedocs.io/en/latest/index.html) and genome annotations in [Bed format](https://www.ensembl.org/info/website/upload/bed.html) maybe noticed that missing task: calculating the physical distance between genomic features. In fact [bedtool closest](https://bedtools.readthedocs.io/en/latest/content/tools/closest.html) allows only to calculate the distance between to proximal features. Following the UNIX phylosophy to create one software for one task, BedDistancR is the attempt to fill this gap. Don’t hesitate to communicate any issues.
 
 Download and Usage
 ----------------------
