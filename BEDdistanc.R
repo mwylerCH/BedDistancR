@@ -116,6 +116,8 @@ BEDlist <- f.Merger(BEDfile1, BEDfile2)
 # calculate basepair distance over the chromosome
 l <- parallel::mclapply(BEDlist, f.dist, mc.cores = 1)
 
+# remove empty elements
+l <- l[lapply(l,nrow)>0]
 
 # merge list to dataframe
 STDOUT <- do.call(rbind.data.frame, l)
